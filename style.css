@@ -9,16 +9,16 @@ body {
     margin: 0;
 }
 
-/* Das Glasfenster mit grau-mattem Effekt */
+/* Shop-Fenster mit Grau-Mattem Glas */
 #shop {
     width: 70vw;
     max-width: 900px;
     height: 70vh;
     border-radius: 15px;
-    backdrop-filter: blur(15px) saturate(80%);
-    background: rgba(60, 60, 70, 0.6);
-    border: 2px solid rgba(100, 100, 110, 0.8);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    background: rgba(100, 100, 100, 0.5); /* Grau-mattes Glas */
+    border: 2px solid rgba(120, 120, 120, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -78,21 +78,34 @@ body {
     transition: 0.3s;
     color: white;
     font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item img {
+    width: 80px;
+    height: auto;
+}
+
+.item p {
+    margin: 10px 0;
 }
 
 .item:hover {
     background: rgba(255, 255, 255, 0.3);
 }
 
-/* Buy-Button */
+/* Kaufen-Button */
 .buy-btn {
-    margin-top: 10px;
-    padding: 8px 12px;
     background: green;
     color: white;
     border: none;
-    border-radius: 5px;
+    padding: 5px 10px;
     cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
     transition: 0.3s;
 }
 
@@ -100,19 +113,18 @@ body {
     background: darkgreen;
 }
 
-/* Schließen-Button (Nur das rote "X") */
+/* Schließen-Button (nur rotes X) */
 .close-btn {
     position: absolute;
     top: 10px;
-    right: 15px;
-    font-size: 24px;
+    right: 10px;
     color: red;
-    cursor: pointer;
+    font-size: 24px;
     font-weight: bold;
+    cursor: pointer;
     transition: 0.3s;
 }
 
 .close-btn:hover {
     color: darkred;
-    transform: scale(1.2);
 }
