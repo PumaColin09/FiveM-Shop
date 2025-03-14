@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop mit Grau-Mattem Glas</title>
+    <link rel="stylesheet" href="style.css"> <!-- Verknüpft die CSS-Datei -->
+</head>
+<body>
+    <div id="shop">
+        <span class="close-btn" onclick="document.getElementById('shop').style.display = 'none'">✖</span>
+        <div class="categories">
+            <h2>Kategorien</h2>
+            <ul>
+                <li class="active" onclick="filterItems('all', this)">Alle</li>
+                <li onclick="filterItems('food', this)">Essen</li>
+                <li onclick="filterItems('drinks', this)">Getränke</li>
+                <li onclick="filterItems('misc', this)">Sonstiges</li>
+            </ul>
+        </div>
+        <div class="items-container">
+            <div class="item">
+                Artikel 1
+                <button class="buy-btn" onclick="buyItem('Artikel 1')">Kaufen</button>
+            </div>
+            <div class="item">
+                Artikel 2
+                <button class="buy-btn" onclick="buyItem('Artikel 2')">Kaufen</button>
+            </div>
+            <div class="item">
+                Artikel 3
+                <button class="buy-btn" onclick="buyItem('Artikel 3')">Kaufen</button>
+            </div>
+            <div class="item">
+                Artikel 4
+                <button class="buy-btn" onclick="buyItem('Artikel 4')">Kaufen</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterItems(category, element) {
+            document.querySelectorAll('.categories li').forEach(li => li.classList.remove('active'));
+            element.classList.add('active');
+            console.log("Filter gesetzt auf:", category);
+        }
+
+        function buyItem(item) {
+            alert(item + " wurde gekauft!");
+        }
+    </script>
+</body>
+</html>
