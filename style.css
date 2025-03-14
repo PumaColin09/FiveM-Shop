@@ -85,12 +85,13 @@ body {
 }
 
 .item img {
-    width: 80px;
+    width: 100px; /* Größer für besseren Look */
     height: auto;
+    margin-bottom: 10px; /* Abstand nach unten */
 }
 
 .item p {
-    margin: 10px 0;
+    margin: 5px 0;
 }
 
 .item:hover {
