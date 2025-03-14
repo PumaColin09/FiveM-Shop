@@ -7,40 +7,38 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-/* Shop-Fenster mit Grau-Mattem Glas */
+/* Shop-Fenster */
 #shop {
     width: 70vw;
     max-width: 900px;
-    height: 70vh;
+    height: auto;
     border-radius: 15px;
     backdrop-filter: blur(20px);
-    background: rgba(100, 100, 100, 0.5); /* Grau-mattes Glas */
+    background: rgba(100, 100, 100, 0.5);
     border: 2px solid rgba(120, 120, 120, 0.6);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    position: relative;
+    text-align: center;
 }
 
 /* Kategorien */
 .categories {
-    width: 30%;
-    padding: 15px;
-    border-radius: 10px;
+    text-align: center;
 }
 
 .categories h2 {
     color: white;
-    text-align: center;
 }
 
 .categories ul {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 .categories li {
@@ -48,9 +46,7 @@ body {
     cursor: pointer;
     color: white;
     background: rgba(255, 255, 255, 0.2);
-    margin-bottom: 5px;
     border-radius: 5px;
-    text-align: center;
     transition: 0.3s;
 }
 
@@ -61,37 +57,26 @@ body {
 
 /* Artikelbereich */
 .items-container {
-    width: 65%;
     display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
     justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
 }
 
 .item {
-    width: 140px;
-    padding: 15px;
+    width: 150px;
     background: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
     border-radius: 8px;
     text-align: center;
+    padding: 10px;
     transition: 0.3s;
-    color: white;
-    font-weight: bold;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .item img {
-    width: 100px; /* Größer für besseren Look */
+    width: 120px;
     height: auto;
-    margin-bottom: 10px; /* Abstand nach unten */
-}
-
-.item p {
-    margin: 5px 0;
+    margin-bottom: 10px;
 }
 
 .item:hover {
@@ -106,26 +91,9 @@ body {
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 5px;
-    font-weight: bold;
     transition: 0.3s;
 }
 
 .buy-btn:hover {
     background: darkgreen;
-}
-
-/* Schließen-Button (nur rotes X) */
-.close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    color: red;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.close-btn:hover {
-    color: darkred;
 }
